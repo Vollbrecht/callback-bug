@@ -1,0 +1,37 @@
+import { Button, VerticalBox, HorizontalBox } from "sixtyfps_widgets.60";
+
+export AppWindow := Window {
+    property<int> frame_counter: 0;
+    property<int> phase_value: 0;
+    callback call_by_value(int) -> image;
+    callback call_void() -> image;
+
+    VerticalBox { 
+        Text {
+            text: "Frame: \{frame_counter}";
+        }
+        Text {
+            text: "Phase Value: \{phase_value}";
+        }
+        HorizontalBox { 
+            Rectangle { 
+                border-color: #000000;
+                border-width: 3px;
+                min-width: 640px;
+                min-height: 480px;
+                Image {
+                    source: root.call-by-value(frame_counter);
+                }
+            }
+            Rectangle { 
+                border-color: #000000;
+                border-width: 3px;
+                min-width: 640px;
+                min-height: 480px;
+                Image {
+                    source: root.call-void();
+                }
+             }
+        }
+    }
+}
