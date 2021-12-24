@@ -1,6 +1,7 @@
-# callback problem
+# No callback execution when using no function argument
 
-Discription: callback gets not executed whenn handle function does not use call_by_value using sixtyfps
+## Discription
+ callback gets not executed whenn handle function does not use call_by_value.
 To illustrate the problem i createt the same function twice
 ``` 
 fn render_call_by_value(call_value: i32) -> sixtyfps::Image {...}
