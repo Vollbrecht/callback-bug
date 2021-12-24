@@ -16,6 +16,7 @@ fn render_call_void() -> sixtyfps::Image {...}
 Only the function with call_by_value gets updated
 
 For bug reproduction use the following minimal repository:
+https://github.com/Vollbrecht/callback-bug
 
 For demonstatrion purpose both run at the same time, but commenting one function out and only let one run does not change the behaviour.
 
